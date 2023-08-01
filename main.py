@@ -3,7 +3,7 @@ import os
 import pytesseract
 import numpy as np
 
-def get_string(img_path, output_dir):
+def get_string(image_path, output_dir):
 
     # Read image using opencv
     img = cv2.imread(img_path)
@@ -42,7 +42,8 @@ def get_string(img_path, output_dir):
 
     print(f"RESULT: {result}")
 
-path = "/Users/jingcao/Desktop/recurse/ocr-notes/ocr_test.jpg"
+# Update this to change input image
+img_path = "/Users/jingcao/Desktop/recurse/ocr-notes/input/hello.jpg"
 out_dir = "/Users/jingcao/Desktop/recurse/ocr-notes/output"
 
-get_string(path, out_dir)
+get_string(img_path, out_dir)
